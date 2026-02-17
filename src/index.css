@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1a5c5c;
+  --color-primary-light: #237474;
+  --color-primary-dark: #144848;
+  --color-secondary: #f5e6d3;
+  --color-accent: #c4913b;
+  --color-accent-hover: #d4a14b;
+  --color-surface: #faf8f5;
+  --color-text: #1a1a1a;
+  --color-text-light: #6b7280;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
