@@ -4,7 +4,7 @@ import { pl } from './pl'
 import { de } from './de'
 import type { Translations } from './en'
 
-type Language = 'en' | 'pl' | 'de'
+export type Language = 'en' | 'pl' | 'de'
 
 const translations: Record<Language, Translations> = { en, pl, de }
 

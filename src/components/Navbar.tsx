@@ -1,6 +1,12 @@
-import { useState, useEffect } from 'react'
-import { useLanguage } from '../i18n/LanguageContext'
-import { Menu, X } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { useLanguage, type Language } from '../i18n/LanguageContext'
+import { Menu, X, ChevronDown } from 'lucide-react'
+
+const languageLabels: Record<Language, string> = {
+  en: 'EN',
+  pl: 'PL',
+  de: 'DE',
+}
 
 const navLinks = [
   { key: 'products' as const, href: '#products' },
@@ -11,9 +17,21 @@ const navLinks = [
 
 export function Navbar() {
   const { lang, t, setLanguage } = useLanguage()
-  const languages = ['en', 'pl', 'de'] as const
+  const languages: Language[] = ['en', 'pl', 'de']
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const langRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -54,24 +72,35 @@ export function Navbar() {
                 {t.nav[link.key]}
               </a>
             ))}
-            <div className="flex items-center gap-1">
-              {languages.map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLanguage(l)}
-                  className={`px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
-                    lang === l
-                      ? scrolled
-                        ? 'bg-primary text-white'
-                        : 'bg-white text-primary'
-                      : scrolled
-                        ? 'text-primary/60 hover:bg-primary/10'
-                        : 'text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  {l.toUpperCase()}
-                </button>
-              ))}
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className={`flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
+                  scrolled
+                    ? 'bg-primary/10 text-primary hover:bg-primary/20'
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                {languageLabels[lang]}
+                <ChevronDown size={14} className={`transition-transform ${langOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden min-w-[80px]">
+                  {languages.map((l) => (
+                    <button
+                      key={l}
+                      onClick={() => { setLanguage(l); setLangOpen(false) }}
+                      className={`w-full px-4 py-2 text-xs font-medium text-left transition-colors ${
+                        lang === l
+                          ? 'bg-primary text-white'
+                          : 'text-text/70 hover:bg-primary/10 hover:text-primary'
+                      }`}
+                    >
+                      {languageLabels[l]}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -97,21 +126,17 @@ export function Navbar() {
                 {t.nav[link.key]}
               </a>
             ))}
-            <div className="flex items-center gap-1">
+            <select
+              value={lang}
+              onChange={(e) => setLanguage(e.target.value as Language)}
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border-none outline-none cursor-pointer"
+            >
               {languages.map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLanguage(l)}
-                  className={`px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
-                    lang === l
-                      ? 'bg-primary text-white'
-                      : 'text-primary/60 hover:bg-primary/10'
-                  }`}
-                >
-                  {l.toUpperCase()}
-                </button>
+                <option key={l} value={l}>
+                  {languageLabels[l]}
+                </option>
               ))}
-            </div>
+            </select>
           </div>
         </div>
       )}
