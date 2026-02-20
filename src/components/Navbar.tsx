@@ -10,7 +10,8 @@ const navLinks = [
 ]
 
 export function Navbar() {
-  const { lang, t, toggleLanguage } = useLanguage()
+  const { lang, t, setLanguage } = useLanguage()
+  const languages = ['en', 'pl', 'de'] as const
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -53,16 +54,25 @@ export function Navbar() {
                 {t.nav[link.key]}
               </a>
             ))}
-            <button
-              onClick={toggleLanguage}
-              className={`px-3 py-1 text-sm font-medium border rounded-full transition-colors ${
-                scrolled
-                  ? 'border-primary/30 text-primary hover:bg-primary hover:text-white'
-                  : 'border-white/30 text-white hover:bg-white/20'
-              }`}
-            >
-              {lang === 'en' ? 'PL' : 'EN'}
-            </button>
+            <div className="flex items-center gap-1">
+              {languages.map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLanguage(l)}
+                  className={`px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
+                    lang === l
+                      ? scrolled
+                        ? 'bg-primary text-white'
+                        : 'bg-white text-primary'
+                      : scrolled
+                        ? 'text-primary/60 hover:bg-primary/10'
+                        : 'text-white/60 hover:bg-white/20'
+                  }`}
+                >
+                  {l.toUpperCase()}
+                </button>
+              ))}
+            </div>
           </div>
 
           <button
@@ -87,12 +97,21 @@ export function Navbar() {
                 {t.nav[link.key]}
               </a>
             ))}
-            <button
-              onClick={toggleLanguage}
-              className="px-3 py-1 text-sm font-medium border border-primary/30 rounded-full text-primary"
-            >
-              {lang === 'en' ? 'PL' : 'EN'}
-            </button>
+            <div className="flex items-center gap-1">
+              {languages.map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLanguage(l)}
+                  className={`px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
+                    lang === l
+                      ? 'bg-primary text-white'
+                      : 'text-primary/60 hover:bg-primary/10'
+                  }`}
+                >
+                  {l.toUpperCase()}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}
