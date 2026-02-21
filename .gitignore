@@ -26,3 +26,4 @@ dist-ssr
 .env
 .env.local
 *.png
+!src/assets/*.png

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLanguage, type Language } from '../i18n/LanguageContext'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import logoWhite from '../assets/woodson-logo-white.png'
 
 const languageLabels: Record<Language, string> = {
   en: 'EN',
@@ -49,13 +50,14 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <a
-            href="#"
-            className={`text-2xl sm:text-3xl font-heading font-bold transition-colors ${
-              scrolled ? 'text-primary' : 'text-white'
-            }`}
-          >
-            Woodson
+          <a href="#" className="block">
+            <img
+              src={logoWhite}
+              alt="Woodson"
+              className={`h-6 sm:h-7 w-auto transition-all duration-300 ${
+                scrolled ? 'brightness-0' : ''
+              }`}
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
