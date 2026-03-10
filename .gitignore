@@ -27,3 +27,6 @@ dist-ssr
 .env.local
 *.png
 !src/assets/*.png
+
+# Local Netlify folder
+.netlify

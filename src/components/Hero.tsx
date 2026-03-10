@@ -1,55 +1,50 @@
 import { useLanguage } from '../i18n/LanguageContext'
-import { ArrowDown } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light" />
-      {/* Wood grain texture overlay */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q25 15 50 20 T100 20' fill='none' stroke='%23fff' stroke-width='0.5'/%3E%3Cpath d='M0 40 Q25 35 50 40 T100 40' fill='none' stroke='%23fff' stroke-width='0.5'/%3E%3Cpath d='M0 60 Q25 55 50 60 T100 60' fill='none' stroke='%23fff' stroke-width='0.5'/%3E%3Cpath d='M0 80 Q25 75 50 80 T100 80' fill='none' stroke='%23fff' stroke-width='0.5'/%3E%3C/svg%3E")`,
-          backgroundSize: '200px 200px',
-        }}
-      />
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        {/* Badges */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {[t.hero.badge1, t.hero.badge2, t.hero.badge3].map((badge) => (
-            <span
-              key={badge}
-              className="px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white/90"
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
-
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
-          {t.hero.headline}
-        </h1>
-
-        <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-body">
-          {t.hero.subtitle}
-        </p>
-
-        <a
-          href="#configurator"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg text-lg transition-colors shadow-lg shadow-accent/25"
-        >
-          {t.hero.cta}
-          <ArrowDown size={20} />
-        </a>
+    <section className="relative h-screen bg-dark overflow-hidden flex items-center">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-[180px]" />
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown size={24} className="text-white/50" />
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 lg:px-12 grid lg:grid-cols-[1.2fr_1fr] gap-8 items-center">
+        <div>
+          <div className="anim-fade-up-1 overflow-hidden">
+            <h1 className="text-[clamp(2.5rem,6vw,5.5rem)] font-heading font-800 text-white leading-[1.02] tracking-[-0.02em]">
+              Drewniane
+              <br />
+              <span className="shimmer-text">displaye</span>
+              <br />
+              <span className="text-white/40">na lata</span>
+            </h1>
+          </div>
+
+          <p className="anim-fade-up-2 mt-8 text-lg sm:text-xl text-white/35 font-body font-300 leading-relaxed max-w-md">
+            {t.hero.subtitle}
+          </p>
+
+          <div className="anim-fade-up-3 mt-10 flex items-center gap-6">
+            <a href="#contact"
+              className="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-white font-heading font-600 text-[13px] uppercase tracking-[0.15em] transition-all duration-300 hover:bg-accent-hover hover:shadow-2xl hover:shadow-accent/20">
+              {t.hero.cta}
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="#products" className="text-white/30 text-sm font-heading font-500 hover:text-white/60 transition-colors">
+              Zobacz realizacje →
+            </a>
+          </div>
+        </div>
+
+        <div className="hidden lg:flex justify-end anim-scale-in">
+          <div className="anim-float relative">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(196,145,59,0.08)_0%,_transparent_60%)] scale-[2]" />
+            <img src="/products/stand-kunagone-render.png" alt="Ekspozytor Woodson"
+              className="max-h-[80vh] object-contain drop-shadow-[0_40px_100px_rgba(0,0,0,0.5)]" />
+          </div>
+        </div>
       </div>
     </section>
   )
