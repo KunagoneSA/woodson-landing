@@ -8,16 +8,16 @@ export function StatsStrip() {
   const c3 = useCounter(100, 1500, s.visible)
 
   return (
-    <div ref={s.ref} className="bg-accent py-10">
-      <div className="max-w-5xl mx-auto px-8 flex items-center justify-between">
+    <div ref={s.ref} className="bg-accent py-4 sm:py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-2">
         {[
           { val: `${c1}×`, label: 'trwalsze niż karton' },
           { val: `${c2}+`, label: 'lat żywotności' },
           { val: `${c3}%`, label: 'lite drewno' },
         ].map((s, i) => (
           <div key={i} className="text-center flex-1">
-            <div className="text-[2.8rem] sm:text-[3.5rem] font-heading font-800 text-white leading-none">{s.val}</div>
-            <div className="text-[11px] text-white/60 font-heading font-500 uppercase tracking-[0.2em] mt-2">{s.label}</div>
+            <div className="text-[1.4rem] sm:text-[2.2rem] md:text-[3.5rem] font-heading font-800 text-white leading-none">{s.val}</div>
+            <div className="text-[9px] sm:text-[11px] text-white/60 font-heading font-500 uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-1 sm:mt-2">{s.label}</div>
           </div>
         ))}
       </div>

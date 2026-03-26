@@ -51,7 +51,7 @@ export function ProblemSolution() {
             </div>
             <div ref={s3.ref} className={`flex justify-center reveal-right ${s3.visible ? 'visible' : ''}`}>
               <img
-                src="/products/stand-drewniany-produkty.png"
+                src="/products/stand-drewniany-produkty.webp"
                 alt="Ekspozytor Woodson"
                 className="max-h-[520px] object-contain drop-shadow-[0_25px_70px_rgba(0,0,0,0.4)]"
               />

@@ -2,12 +2,12 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const items = [
-  { img: '/products/stand-kunagone.png', span: 'col-span-1 row-span-2' },
-  { img: '/products/ekspozytor-est2023.png', span: 'col-span-1' },
-  { img: '/products/stand-kunagone-render.png', span: 'col-span-1' },
-  { img: '/products/ekspozytor-regal.png', span: 'col-span-1 row-span-2' },
-  { img: '/products/stand-tm-2022.png', span: 'col-span-1' },
-  { img: '/products/ekspozytor-skrzynkowy-3.png', span: 'col-span-1' },
+  { img: '/products/v3-wino-fest.webp', fit: 'object-cover object-center' },
+  { img: '/products/v5-garden-hearth.webp', fit: 'object-contain p-2' },
+  { img: '/products/v4-artisan-regal.webp', fit: 'object-cover object-center' },
+  { img: '/products/v2-artisan-deska.webp', fit: 'object-cover object-center' },
+  { img: '/products/v1-regaly-ogrodnicze.webp', fit: 'object-cover object-top' },
+  { img: '/products/v6-sklep-stand.webp', fit: 'object-cover object-center' },
 ]
 
 export function Portfolio() {
@@ -15,30 +15,25 @@ export function Portfolio() {
   const s = useScrollReveal()
 
   return (
-    <section id="products" className="py-16 sm:py-20 bg-dark">
-      <div className="max-w-6xl mx-auto px-8 lg:px-12">
-        <div ref={s.ref} className={`mb-12 reveal ${s.visible ? 'visible' : ''}`}>
-          <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent/50">Realizacje</span>
-          <h2 className="mt-6 text-[2rem] sm:text-[2.8rem] font-heading font-800 text-white leading-[1.1] tracking-tight">
+    <section id="products" className="py-6 sm:py-14 bg-dark relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.08] rounded-full blur-[200px]" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div ref={s.ref} className={`mb-4 sm:mb-12 reveal relative z-10 text-center lg:text-left ${s.visible ? 'visible' : ''}`}>
+          <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface">Realizacje</span>
+          <h2 className="mt-3 sm:mt-6 text-[2rem] sm:text-[2.8rem] font-heading font-800 text-white leading-[1.1] tracking-tight">
             {t.portfolio.title}
           </h2>
         </div>
 
-        {/* Bento grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 auto-rows-[220px] gap-4">
+        {/* Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {items.map((item, i) => (
             <div
               key={i}
-              className={`${item.span} group relative bg-white/[0.03] border border-white/5 overflow-hidden hover-lift`}
+              className="group relative aspect-[3/4] bg-white/[0.06] rounded-lg border border-white/10 overflow-hidden hover-lift"
             >
-              <img src={item.img} alt={t.portfolio.items[i] || ''}
-                className="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              {t.portfolio.items[i] && (
-                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <span className="text-white text-sm font-heading font-600">{t.portfolio.items[i]}</span>
-                </div>
-              )}
+              <img src={item.img} alt=""
+                className={`absolute inset-0 w-full h-full ${item.fit} transition-transform duration-700 group-hover:scale-105`} />
             </div>
           ))}
         </div>

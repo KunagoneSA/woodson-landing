@@ -34,23 +34,23 @@ export function CtaContact() {
     finally { setSubmitting(false) }
   }
 
-  const inp = "w-full px-5 py-4 bg-transparent border-b border-text-dark/15 text-text-dark text-sm font-body font-400 focus:outline-none focus:border-accent transition-all placeholder-text-light/50"
+  const inp = "w-full px-5 py-4 bg-white/10 border-b border-white/20 text-white text-sm font-body font-400 focus:outline-none focus:border-white transition-all placeholder-white/40"
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-surface">
-      <div ref={s.ref} className={`max-w-5xl mx-auto px-8 lg:px-12 reveal ${s.visible ? 'visible' : ''}`}>
-        <div className="grid lg:grid-cols-[1fr_1.3fr] gap-20">
+    <section id="contact" className="py-6 sm:py-14 bg-accent">
+      <div ref={s.ref} className={`max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 reveal ${s.visible ? 'visible' : ''}`}>
+        <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-20">
           {/* Left — big statement */}
-          <div>
-            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent">Kontakt</span>
-            <h2 className="mt-6 text-[2rem] sm:text-[2.4rem] font-heading font-800 text-text-dark leading-[1.1] tracking-tight">
+          <div className="flex flex-col">
+            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface block text-center lg:text-left">Kontakt</span>
+            <h2 className="mt-6 text-[2rem] sm:text-[2.4rem] font-heading font-800 text-white leading-[1.1] text-center lg:text-left tracking-tight">
               {t.cta.title}
             </h2>
-            <p className="mt-6 text-base text-text-mid font-body font-300 leading-[2]">{t.cta.text}</p>
-            <div className="mt-10 space-y-3 text-sm text-text-light font-body font-300">
-              <p>hello@woodson.pl</p>
-              <p>+48 882-905-145</p>
-              <p>Chełmek, Polska</p>
+            <p className="mt-6 text-base text-white font-body font-300 leading-[2] text-center lg:text-left">{t.cta.text}</p>
+            <div className="mt-auto pt-6 space-y-2 text-sm font-body font-400 text-center lg:text-left">
+              <p className="text-surface">hello@woodson.pl</p>
+              <p className="text-surface">+48 882-905-145</p>
+              <p className="text-surface">Chełmek, Polska</p>
             </div>
           </div>
 
@@ -58,8 +58,8 @@ export function CtaContact() {
           <div>
             {submitted ? (
               <div className="text-center py-20">
-                <CheckCircle size={48} className="text-accent mx-auto mb-6" />
-                <p className="text-xl font-heading font-700 text-text-dark">{t.form.success}</p>
+                <CheckCircle size={48} className="text-white mx-auto mb-6" />
+                <p className="text-xl font-heading font-700 text-white">{t.form.success}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -77,7 +77,7 @@ export function CtaContact() {
                 {error && <p className="text-red-500 text-sm">{error}</p>}
 
                 <button type="submit" disabled={submitting}
-                  className="inline-flex items-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover disabled:opacity-60 text-white font-heading font-600 text-[13px] uppercase tracking-[0.15em] transition-all duration-300 hover:shadow-xl hover:shadow-accent/20">
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-10 py-5 bg-surface text-darker hover:bg-surface-warm disabled:opacity-60 font-heading font-600 text-[13px] uppercase tracking-[0.15em] transition-all duration-300 hover:shadow-xl hover:shadow-black/10">
                   {submitting ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
                   {t.form.submit}
                 </button>

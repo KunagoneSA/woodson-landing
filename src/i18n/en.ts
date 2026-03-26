@@ -40,10 +40,22 @@ export interface Translations {
     yesList: string[]
     outro: string
   }
+  b2b: {
+    title: string
+    text: string
+    items: { title: string; text: string }[]
+  }
+  b2c: {
+    title: string
+    text: string
+    items: { title: string; text: string }[]
+  }
   custom: {
     title: string
     text: string
     points: string[]
+    personalization: string
+    personalizationItems: string[]
     outro: string
   }
   portfolio: {
@@ -155,15 +167,52 @@ export const en: Translations = {
     yesList: ['Durable', 'Stable', 'Aesthetic', 'Natural'],
     outro: 'Wood is a timeless material that presents products well and emphasizes brand quality.',
   },
+  b2b: {
+    title: 'How wooden displays support sales',
+    text: 'Wooden displays work on multiple levels — from everyday product presentation to building brand image.',
+    items: [
+      { title: 'In-store product display', text: 'A wooden shelf replaces the standard store shelf. The client provides their own display that sets their products apart from the competition.' },
+      { title: 'Highlighting new products & promotions', text: 'A new wine series, limited edition cosmetics? A dedicated stand designed for a specific product attracts attention and builds interest.' },
+      { title: 'Building an eco-friendly image', text: 'A wooden display sends a clear signal to customers — the brand uses natural materials and takes a responsible approach to the environment.' },
+      { title: 'Organizing retail space', text: "It's not just manufacturers who order displays. Store chain owners use them to organize space and better present their assortment." },
+      { title: 'Impulse purchases', text: 'A small, narrow display by the checkout or in a walkway encourages quick, additional purchases. Compact form, big sales impact.' },
+      { title: 'Trade shows & events', text: 'Wooden stands look great at trade fairs, in showrooms, and during promotional events. Premium aesthetics that cardboard and plastic cannot provide.' },
+    ],
+  },
+  b2c: {
+    title: 'Displays for private use',
+    text: "Wooden displays aren't just for business. More and more people order them for homes, offices, and private events.",
+    items: [
+      { title: 'Home organizer', text: 'For cosmetics, spices, teas, coffees, candles, perfumes, or small accessories.' },
+      { title: 'Collection display shelf', text: 'For figurines, plants, candles, books, vinyl, crafts, or any items you want to beautifully showcase.' },
+      { title: 'Interior decorative element', text: 'A wooden display can serve as a decorative feature in the kitchen, living room, bathroom, or hallway.' },
+      { title: 'Pantry or kitchen stand', text: 'For organizing jars, bottles, snacks, fruits, or kitchen accessories.' },
+      { title: 'Desktop display', text: 'For notebooks, pens, office accessories, small gadgets, or work items.' },
+      { title: 'Furniture for private events', text: 'At weddings, communions, birthdays, or parties — as a stand for sweets, gifts, place cards, menus, or decorations.' },
+      { title: 'Market & fair stand', text: 'If you sell your crafts occasionally — perfect for fairs, markets, and local events.' },
+      { title: 'Seasonal display', text: 'For Christmas, Easter, autumn, or other seasonal decorations.' },
+      { title: 'Product photography stand', text: 'Can serve as a backdrop or pedestal for photographing candles, cosmetics, jewelry, or crafts for social media.' },
+    ],
+  },
   custom: {
     title: 'Every display is built for a specific product',
-    text: "We don't make universal stands. Every project is based on:",
+    text: "We don't make universal stands — only ones that meet your business needs 100%",
     points: [
-      'Product dimensions',
-      'Product weight',
-      'Display method',
-      'Retail space',
-      'Brand visual identity',
+      'product dimensions',
+      'product weight',
+      'display method',
+      'retail space',
+      'brand visual identity',
+      'and much, much more',
+    ],
+    personalization: 'Brand personalization',
+    personalizationItems: [
+      'Prints on wood',
+      'Posters & graphics',
+      'Laser burning',
+      'Engraving',
+      'Painting & staining',
+      'and other solutions',
     ],
     outro: 'The result is a display that perfectly fits the product and point of sale.',
   },
@@ -218,10 +267,14 @@ export const en: Translations = {
   faq: {
     title: 'Frequently asked questions',
     items: [
-      { q: 'Do you handle international orders?', a: 'Yes, we work with clients from various European countries.' },
+      { q: 'Do you handle international orders?', a: 'Yes, we work with clients from various European countries. We arrange transport across the entire EU.' },
       { q: 'Is every display designed individually?', a: 'Yes. We tailor every project to the product, its weight, dimensions, and retail space.' },
-      { q: 'How long does a project take?', a: 'The timeline depends on the size and complexity of the project.' },
+      { q: 'How long does a project take?', a: 'The timeline depends on the size and complexity of the project. Simple displays take a few business days, more complex projects up to a few weeks.' },
       { q: 'Do you help with display design?', a: 'Yes. We advise on structural solutions and help refine the project to be functional and durable.' },
+      { q: 'What is the minimum order?', a: "We don't have a strict minimum. We handle both single pieces and series of several hundred displays." },
+      { q: 'Can I order a display for private use?', a: 'Absolutely. More and more individual clients order organizers, display shelves, and stands for home, office, or private events.' },
+      { q: 'What type of wood do you use?', a: 'We work with solid pine and spruce wood. On request, we can apply staining, painting, or varnishing.' },
+      { q: 'Do you offer branding on displays?', a: 'Yes. We offer prints on wood, laser burning, engraving, posters and graphics, and painting. We match the branding to your visual identity.' },
     ],
   },
   footer: {
