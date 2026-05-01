@@ -14,7 +14,7 @@ export function NaturalWood() {
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img loading="lazy" src="/products/v5-garden-hearth.webp" alt="Ekspozytor z litego drewna"
+            <img loading="lazy" src="/products/v5-garden-hearth.webp" alt="Solid wood display"
               className="max-h-[300px] lg:max-h-[500px] object-contain" />
           </div>
 
@@ -22,7 +22,7 @@ export function NaturalWood() {
           <div>
             <span className="inline-flex items-center gap-2 text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent">
               <Leaf size={14} />
-              Naturalne drewno
+              {t.wood.label}
             </span>
             <h2 className="mt-5 text-[2rem] sm:text-[2.8rem] font-heading font-800 text-text-dark leading-[1.1] tracking-tight">
               {t.wood.title}

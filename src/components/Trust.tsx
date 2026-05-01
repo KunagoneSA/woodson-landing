@@ -11,7 +11,7 @@ export function Trust() {
       <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
         <div ref={s.ref} className={`grid md:grid-cols-2 gap-10 md:gap-20 items-center reveal ${s.visible ? 'visible' : ''}`}>
           <div>
-            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface block text-center md:text-left">Zaufanie</span>
+            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface block text-center md:text-left">{t.trust.label}</span>
             <h2 className="mt-6 text-[2rem] sm:text-[2.6rem] font-heading font-800 text-white leading-[1.15] text-center md:text-left tracking-tight">
               {t.trust.title}
             </h2>
@@ -29,7 +29,7 @@ export function Trust() {
           </div>
           <div className="flex justify-center relative">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_color-mix(in_srgb,var(--color-accent)_15%,transparent)_0%,_transparent_70%)] scale-150" />
-            <img loading="lazy" src="/products/v1-regaly-ogrodnicze.webp" alt="Stand Woodson"
+            <img loading="lazy" src="/products/v1-regaly-ogrodnicze.webp" alt="Woodson stand"
               className="max-h-[300px] md:max-h-[480px] object-contain drop-shadow-[0_25px_70px_rgba(0,0,0,0.4)]" />
           </div>
         </div>

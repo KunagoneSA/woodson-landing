@@ -1,6 +1,11 @@
 import type { Translations } from './en'
 
 export const pl: Translations = {
+  meta: {
+    title: 'Woodson | Drewniane ekspozytory POS, które wytrzymują lata',
+    description: 'Projektujemy i produkujemy ekspozytory POS oraz regały z litego drewna, dopasowane do Twojego produktu, przestrzeni sprzedaży i marki. Produkcja w Polsce.',
+    ogTitle: 'Woodson, drewniane ekspozytory POS z litego drewna',
+  },
   nav: {
     products: 'Realizacje',
     whyWood: 'Dlaczego drewno',
@@ -19,8 +24,13 @@ export const pl: Translations = {
       'Produkcja w Polsce',
     ],
     cta: 'Zapytaj o projekt',
+    heroWord1: 'Drewniane',
+    heroWord2: 'displaye',
+    heroWord3: 'na lata',
+    seeProjects: 'Zobacz realizacje \u2192',
   },
   problem: {
+    label: 'Problem',
     title: 'Kartonowe displaye dobrze wyglądają tylko przez chwilę',
     text: 'Ekspozytory z kartonu są często traktowane jako szybkie i tymczasowe rozwiązanie. Po kilku tygodniach użytkowania zaczynają się odkształcać, niszczyć i tracić swój estetyczny wygląd.',
     subtitle: 'Dla marki oznacza to:',
@@ -32,6 +42,7 @@ export const pl: Translations = {
     outro: 'Dlatego coraz więcej firm szuka trwalszych i bardziej estetycznych rozwiązań ekspozycyjnych.',
   },
   solution: {
+    label: 'Rozwiązanie',
     title: 'Drewniane displaye dopasowane do Twojego produktu',
     text: 'W Woodson projektujemy i produkujemy regały oraz ekspozytory POS z litego drewna, które są dopasowane do produktów, przestrzeni sprzedaży i charakteru marki.',
     subtitle: 'Nasze displaye:',
@@ -44,6 +55,8 @@ export const pl: Translations = {
     outro: 'To rozwiązanie, które sprawdza się w sklepach, showroomach oraz punktach sprzedaży.',
   },
   comparison: {
+    label: 'Porównanie',
+    heading: 'Karton czy drewno?',
     title: 'Display kartonowy czy drewniany?',
     headers: ['Display kartonowy', 'Display drewniany Woodson'],
     rows: [
@@ -54,8 +67,26 @@ export const pl: Translations = {
       ['Ograniczona personalizacja', 'Projekt dopasowany do produktu'],
     ],
     note: 'Różnica w cenie często wynosi około 30–40%, natomiast trwałość drewnianej ekspozycji jest wielokrotnie większa.',
+    cardboardTitle: 'Karton & plastik',
+    woodTitle: 'drewno',
+    cardboardItems: [
+      'Niszczy się po tygodniach',
+      'Wygląda tanio',
+      'Nie buduje wizerunku premium',
+      'Wymaga ciągłej wymiany',
+    ],
+    woodItems: [
+      'Wytrzymuje lata',
+      'Buduje wizerunek marki',
+      '100% naturalne drewno',
+      'Indywidualny projekt',
+    ],
+    priceLabel: 'Różnica w cenie',
+    durabilityLabel: 'Trwałość drewna',
+    durabilityValue: 'wielokrotnie większa',
   },
   wood: {
+    label: 'Naturalne drewno',
     title: 'Pracujemy wyłącznie na naturalnym drewnie',
     text: 'Nasze ekspozytory powstają z litego, surowego drewna.',
     noList: [
@@ -80,6 +111,7 @@ export const pl: Translations = {
     ],
   },
   b2c: {
+    label: 'Nie tylko dla firm',
     title: 'Ekspozytory do użytku prywatnego',
     text: 'Drewniane displaye to nie tylko rozwiązanie dla biznesu. Coraz więcej osób zamawia je do domu, biura i na prywatne wydarzenia.',
     items: [
@@ -95,8 +127,10 @@ export const pl: Translations = {
     ],
   },
   custom: {
+    label: 'Tworzony na wymiar',
     title: 'Każdy display tworzymy pod konkretny produkt',
     text: 'Nie tworzymy uniwersalnych stojaków — tylko takie, które w 100% spełniają Twoje potrzeby biznesowe',
+    basisTitle: 'Co bierzemy pod uwagę:',
     points: [
       'wymiary produktu',
       'jego wagę',
@@ -115,8 +149,10 @@ export const pl: Translations = {
       'I inne rozwiązania',
     ],
     outro: 'Dzięki temu powstaje ekspozytor, który idealnie pasuje do produktu i miejsca sprzedaży.',
+    designCta: 'Zaprojektuj swój display',
   },
   portfolio: {
+    label: 'Realizacje',
     title: 'Zobacz przykładowe realizacje',
     text: 'Tworzymy ekspozytory dla różnych branż i produktów.',
     items: [
@@ -129,7 +165,10 @@ export const pl: Translations = {
     ],
   },
   process: {
+    label: 'Proces',
     title: 'Jak wygląda współpraca',
+    description: 'Od pomysłu do gotowego displaya — prosto i szybko.',
+    step: 'Krok',
     steps: [
       { title: 'Rozmowa o projekcie', text: 'Poznajemy Twój produkt oraz sposób jego ekspozycji.' },
       { title: 'Projekt displayu', text: 'Proponujemy konstrukcję dopasowaną do Twoich potrzeb.' },
@@ -139,6 +178,7 @@ export const pl: Translations = {
     ],
   },
   trust: {
+    label: 'Zaufanie',
     title: 'Wielu klientów wraca do nas z kolejnymi projektami',
     text: 'Od lat współpracujemy z firmami, które szukają trwałych i estetycznych rozwiązań ekspozycyjnych.',
     points: [
@@ -150,9 +190,11 @@ export const pl: Translations = {
     outro: 'Powracający klienci są dla nas najlepszym potwierdzeniem jakości naszej pracy.',
   },
   cta: {
+    label: 'Kontakt',
     title: 'Masz pomysł na ekspozycję swojego produktu?',
     text: 'Zaprojektujemy i wykonamy drewniany display dopasowany do Twojej marki i produktu.',
     btn: 'Wyślij zapytanie',
+    location: 'Chełmek, Polska',
   },
   form: {
     name: 'Imię i nazwisko',
@@ -163,6 +205,7 @@ export const pl: Translations = {
     submit: 'Wyślij zapytanie',
     success: 'Dziękujemy! Odezwiemy się wkrótce.',
     note: 'Odpowiadamy w ciągu 24 godzin',
+    error: 'Coś poszło nie tak. Spróbuj ponownie.',
   },
   faq: {
     title: 'Najczęściej zadawane pytania',
@@ -182,5 +225,8 @@ export const pl: Translations = {
     contact: 'Kontakt',
     links: 'Linki',
     rights: '© 2026 Greenfire Sp. z o.o. Wszelkie prawa zastrzeżone.',
+  },
+  stats: {
+    items: ['trwalsze niż karton', 'lat żywotności', 'lite drewno'],
   },
 }

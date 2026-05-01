@@ -30,7 +30,7 @@ export function CtaContact() {
         })
       }
       setSubmitted(true)
-    } catch { setError('Something went wrong.') }
+    } catch { setError(t.form.error) }
     finally { setSubmitting(false) }
   }
 
@@ -42,7 +42,7 @@ export function CtaContact() {
         <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-20">
           {/* Left — big statement */}
           <div className="flex flex-col">
-            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface block text-center lg:text-left">Kontakt</span>
+            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface block text-center lg:text-left">{t.cta.label}</span>
             <h2 className="mt-6 text-[2rem] sm:text-[2.4rem] font-heading font-800 text-white leading-[1.1] text-center lg:text-left tracking-tight">
               {t.cta.title}
             </h2>
@@ -50,7 +50,7 @@ export function CtaContact() {
             <div className="mt-auto pt-6 space-y-2 text-sm font-body font-400 text-center lg:text-left">
               <p className="text-surface">hello@woodson.pl</p>
               <p className="text-surface">+48 882-905-145</p>
-              <p className="text-surface">Chełmek, Polska</p>
+              <p className="text-surface">{t.cta.location}</p>
             </div>
           </div>
 

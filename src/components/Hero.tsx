@@ -16,11 +16,11 @@ export function Hero() {
         <div className="lg:hidden text-center">
           <div className="anim-fade-up-1 overflow-hidden">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-800 text-white leading-[1.05] tracking-[-0.02em]">
-              Drewniane
+              {t.hero.heroWord1}
               <br />
-              <span className="shimmer-text">displaye</span>
+              <span className="shimmer-text">{t.hero.heroWord2}</span>
               <br />
-              <span className="text-white/40">na lata</span>
+              <span className="text-white/40">{t.hero.heroWord3}</span>
             </h1>
           </div>
 
@@ -29,7 +29,7 @@ export function Hero() {
           </p>
 
           <div className="anim-fade-up-3 flex justify-center mt-8">
-            <img src="/products/v5.1-stand-pusty-nobg.webp" alt="Ekspozytor Woodson"
+            <img src="/products/v5.1-stand-pusty-nobg.webp" alt="Woodson display"
               className="max-h-[50vh] object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.3)]" />
           </div>
 
@@ -40,7 +40,7 @@ export function Hero() {
               <ArrowRight size={16} />
             </a>
             <a href="#products" className="text-white/60 text-sm font-heading font-500">
-              Zobacz realizacje →
+              {t.hero.seeProjects}
             </a>
           </div>
         </div>
@@ -50,11 +50,11 @@ export function Hero() {
           <div>
             <div className="anim-fade-up-1 overflow-hidden">
               <h1 className="text-[clamp(2.5rem,6vw,5.5rem)] font-heading font-800 text-white leading-[1.02] tracking-[-0.02em]">
-                Drewniane
+                {t.hero.heroWord1}
                 <br />
-                <span className="shimmer-text">displaye</span>
+                <span className="shimmer-text">{t.hero.heroWord2}</span>
                 <br />
-                <span className="text-white/40">na lata</span>
+                <span className="text-white/40">{t.hero.heroWord3}</span>
               </h1>
             </div>
 
@@ -69,7 +69,7 @@ export function Hero() {
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a href="#products" className="text-white/60 text-sm font-heading font-500 hover:text-white transition-colors">
-                Zobacz realizacje →
+                {t.hero.seeProjects}
               </a>
             </div>
           </div>
@@ -77,7 +77,7 @@ export function Hero() {
           <div className="flex justify-end anim-scale-in">
             <div className="anim-float relative">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,112,96,0.15)_0%,_transparent_60%)] scale-[2]" />
-              <img src="/products/v5.1-stand-pusty-nobg.webp" alt="Ekspozytor Woodson"
+              <img src="/products/v5.1-stand-pusty-nobg.webp" alt="Woodson display"
                 className="max-h-[80vh] object-contain drop-shadow-[0_40px_100px_rgba(0,0,0,0.5)]" />
             </div>
           </div>

@@ -14,12 +14,12 @@ export function Process() {
         <div ref={s.ref} className={`reveal ${s.visible ? 'visible' : ''}`}>
 
           <div className="text-center mb-10 sm:mb-14">
-            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent">Proces</span>
+            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent">{t.process.label}</span>
             <h2 className="mt-4 text-[2rem] sm:text-[2.8rem] font-heading font-800 text-[#1a2e28] leading-[1.1] tracking-tight">
               {t.process.title}
             </h2>
             <p className="mt-4 text-lg text-[#4a5c56] font-body font-400">
-              Od pomysłu do gotowego displaya — prosto i szybko.
+              {t.process.description}
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export function Process() {
                   <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center mb-4 shadow-lg shadow-accent/20">
                     <Icon size={20} className="text-white" />
                   </div>
-                  <div className="text-[10px] font-heading font-500 text-accent/60 uppercase tracking-[0.15em] mb-1">Krok {i + 1}</div>
+                  <div className="text-[10px] font-heading font-500 text-accent/60 uppercase tracking-[0.15em] mb-1">{t.process.step} {i + 1}</div>
                   <h3 className="text-[15px] font-heading font-700 text-[#1a2e28] mb-2">{step.title}</h3>
                   <p className="text-sm text-[#4a5c56] leading-[1.7] font-body font-300">{step.text}</p>
                 </div>
@@ -60,7 +60,7 @@ export function Process() {
                     {!isLast && <div className="w-0.5 flex-1 bg-accent/20 my-1" />}
                   </div>
                   <div className="pb-8">
-                    <div className="text-[10px] font-heading font-500 text-accent/60 uppercase tracking-[0.15em] mb-1">Krok {i + 1}</div>
+                    <div className="text-[10px] font-heading font-500 text-accent/60 uppercase tracking-[0.15em] mb-1">{t.process.step} {i + 1}</div>
                     <h3 className="text-base font-heading font-700 text-[#1a2e28] mb-1">{step.title}</h3>
                     <p className="text-sm text-[#4a5c56] leading-[1.7] font-body font-300">{step.text}</p>
                   </div>

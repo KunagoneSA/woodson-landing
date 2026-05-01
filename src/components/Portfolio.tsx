@@ -19,7 +19,7 @@ export function Portfolio() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.08] rounded-full blur-[200px]" />
       <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
         <div ref={s.ref} className={`mb-4 sm:mb-12 reveal relative z-10 text-center lg:text-left ${s.visible ? 'visible' : ''}`}>
-          <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface">Realizacje</span>
+          <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface">{t.portfolio.label}</span>
           <h2 className="mt-3 sm:mt-6 text-[2rem] sm:text-[2.8rem] font-heading font-800 text-white leading-[1.1] tracking-tight">
             {t.portfolio.title}
           </h2>

@@ -24,7 +24,7 @@ export function B2cUseCases() {
 
           {/* Left — text */}
           <div>
-            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface/80 block text-center lg:text-left">Nie tylko dla firm</span>
+            <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-surface/80 block text-center lg:text-left">{t.b2c.label}</span>
             <h2 className="mt-4 text-[2rem] sm:text-[2.4rem] font-heading font-800 text-white leading-[1.1] text-center lg:text-left tracking-tight">
               {t.b2c.title}
             </h2>

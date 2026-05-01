@@ -1,4 +1,9 @@
 export interface Translations {
+  meta: {
+    title: string
+    description: string
+    ogTitle: string
+  }
   nav: {
     products: string
     whyWood: string
@@ -11,8 +16,13 @@ export interface Translations {
     subtitle: string
     checks: string[]
     cta: string
+    heroWord1: string
+    heroWord2: string
+    heroWord3: string
+    seeProjects: string
   }
   problem: {
+    label: string
     title: string
     text: string
     subtitle: string
@@ -20,6 +30,7 @@ export interface Translations {
     outro: string
   }
   solution: {
+    label: string
     title: string
     text: string
     subtitle: string
@@ -27,12 +38,22 @@ export interface Translations {
     outro: string
   }
   comparison: {
+    label: string
+    heading: string
     title: string
     headers: [string, string]
     rows: [string, string][]
     note: string
+    cardboardTitle: string
+    woodTitle: string
+    cardboardItems: string[]
+    woodItems: string[]
+    priceLabel: string
+    durabilityLabel: string
+    durabilityValue: string
   }
   wood: {
+    label: string
     title: string
     text: string
     noList: string[]
@@ -46,37 +67,48 @@ export interface Translations {
     items: { title: string; text: string }[]
   }
   b2c: {
+    label: string
     title: string
     text: string
     items: { title: string; text: string }[]
   }
   custom: {
+    label: string
     title: string
     text: string
+    basisTitle: string
     points: string[]
     personalization: string
     personalizationItems: string[]
     outro: string
+    designCta: string
   }
   portfolio: {
+    label: string
     title: string
     text: string
     items: string[]
   }
   process: {
+    label: string
     title: string
+    description: string
+    step: string
     steps: { title: string; text: string }[]
   }
   trust: {
+    label: string
     title: string
     text: string
     points: string[]
     outro: string
   }
   cta: {
+    label: string
     title: string
     text: string
     btn: string
+    location: string
   }
   form: {
     name: string
@@ -87,6 +119,7 @@ export interface Translations {
     submit: string
     success: string
     note: string
+    error: string
   }
   faq: {
     title: string
@@ -98,9 +131,17 @@ export interface Translations {
     links: string
     rights: string
   }
+  stats: {
+    items: string[]
+  }
 }
 
 export const en: Translations = {
+  meta: {
+    title: 'Woodson | Solid Wood POS Displays Built to Last',
+    description: 'We design and manufacture solid wood POS displays and shelving units, tailored to your products, retail space, and brand. Made in Poland.',
+    ogTitle: 'Woodson — Solid Wood POS Displays',
+  },
   nav: {
     products: 'Portfolio',
     whyWood: 'Why Wood',
@@ -119,8 +160,13 @@ export const en: Translations = {
       'Made in Poland',
     ],
     cta: 'Get a quote',
+    heroWord1: 'Wooden',
+    heroWord2: 'displays',
+    heroWord3: 'for years',
+    seeProjects: 'See projects \u2192',
   },
   problem: {
+    label: 'Problem',
     title: 'Cardboard displays only look good for a moment',
     text: 'Cardboard POS displays are often treated as a quick, temporary solution. After a few weeks of use, they start to warp, deteriorate, and lose their aesthetic appeal.',
     subtitle: 'For your brand, this means:',
@@ -132,6 +178,7 @@ export const en: Translations = {
     outro: "That's why more and more companies are looking for more durable and visually appealing display solutions.",
   },
   solution: {
+    label: 'Solution',
     title: 'Wooden displays tailored to your product',
     text: 'At Woodson, we design and manufacture POS shelving and displays from solid wood, tailored to your products, retail space, and brand character.',
     subtitle: 'Our displays:',
@@ -144,6 +191,8 @@ export const en: Translations = {
     outro: 'A solution that works in stores, showrooms, and points of sale.',
   },
   comparison: {
+    label: 'Comparison',
+    heading: 'Cardboard or wood?',
     title: 'Cardboard or wooden display?',
     headers: ['Cardboard display', 'Woodson wooden display'],
     rows: [
@@ -154,8 +203,26 @@ export const en: Translations = {
       ['Limited personalization', 'Design tailored to product'],
     ],
     note: 'The price difference is often around 30–40%, while the durability of a wooden display is many times greater.',
+    cardboardTitle: 'Cardboard & plastic',
+    woodTitle: 'wood',
+    cardboardItems: [
+      'Falls apart after weeks',
+      'Looks cheap',
+      "Doesn't build a premium image",
+      'Requires constant replacement',
+    ],
+    woodItems: [
+      'Lasts for years',
+      'Builds brand image',
+      '100% natural wood',
+      'Custom design',
+    ],
+    priceLabel: 'Price difference',
+    durabilityLabel: 'Wood durability',
+    durabilityValue: 'many times greater',
   },
   wood: {
+    label: 'Natural wood',
     title: 'We work exclusively with natural wood',
     text: 'Our displays are made from solid, raw wood.',
     noList: [
@@ -180,6 +247,7 @@ export const en: Translations = {
     ],
   },
   b2c: {
+    label: 'Not just for business',
     title: 'Displays for private use',
     text: "Wooden displays aren't just for business. More and more people order them for homes, offices, and private events.",
     items: [
@@ -195,8 +263,10 @@ export const en: Translations = {
     ],
   },
   custom: {
+    label: 'Custom made',
     title: 'Every display is built for a specific product',
     text: "We don't make universal stands — only ones that meet your business needs 100%",
+    basisTitle: 'What we consider:',
     points: [
       'product dimensions',
       'product weight',
@@ -215,8 +285,10 @@ export const en: Translations = {
       'and other solutions',
     ],
     outro: 'The result is a display that perfectly fits the product and point of sale.',
+    designCta: 'Design your display',
   },
   portfolio: {
+    label: 'Portfolio',
     title: 'See example projects',
     text: 'We create displays for various industries and products.',
     items: [
@@ -229,7 +301,10 @@ export const en: Translations = {
     ],
   },
   process: {
+    label: 'Process',
     title: 'How the collaboration works',
+    description: 'From idea to finished display — simple and fast.',
+    step: 'Step',
     steps: [
       { title: 'Project discussion', text: 'We learn about your product and how it should be displayed.' },
       { title: 'Display design', text: 'We propose a construction tailored to your needs.' },
@@ -239,6 +314,7 @@ export const en: Translations = {
     ],
   },
   trust: {
+    label: 'Trust',
     title: 'Many clients come back with new projects',
     text: 'For years, we have been working with companies looking for durable and aesthetic display solutions.',
     points: [
@@ -250,9 +326,11 @@ export const en: Translations = {
     outro: 'Returning clients are the best confirmation of the quality of our work.',
   },
   cta: {
+    label: 'Contact',
     title: 'Have an idea for displaying your product?',
     text: "We'll design and build a wooden display tailored to your brand and product.",
     btn: 'Send inquiry',
+    location: 'Chełmek, Poland',
   },
   form: {
     name: 'Full name',
@@ -263,6 +341,7 @@ export const en: Translations = {
     submit: 'Send inquiry',
     success: 'Thank you! We will get back to you shortly.',
     note: 'We respond within 24 hours',
+    error: 'Something went wrong. Please try again.',
   },
   faq: {
     title: 'Frequently asked questions',
@@ -282,5 +361,8 @@ export const en: Translations = {
     contact: 'Contact',
     links: 'Links',
     rights: '© 2026 Greenfire Sp. z o.o. All rights reserved.',
+  },
+  stats: {
+    items: ['more durable than cardboard', 'years of durability', 'solid wood'],
   },
 }

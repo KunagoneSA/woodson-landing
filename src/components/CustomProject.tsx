@@ -14,7 +14,7 @@ export function CustomProject() {
       <div ref={s.ref} className={`max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 reveal ${s.visible ? 'visible' : ''}`}>
 
         <div className="text-center mb-8 sm:mb-14">
-          <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent">Tworzony na wymiar</span>
+          <span className="text-[11px] font-heading font-500 uppercase tracking-[0.3em] text-accent">{t.custom.label}</span>
           <h2 className="mt-4 text-[2rem] sm:text-[2.6rem] font-heading font-800 text-[#1a2e28] leading-[1.1] tracking-tight">
             {t.custom.title}
           </h2>
@@ -26,7 +26,7 @@ export function CustomProject() {
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Left — project basis */}
           <div className="bg-white/70 rounded-xl p-5 sm:p-10 border border-accent/10 flex flex-col">
-            <h3 className="text-lg font-heading font-700 text-[#1a2e28] mb-6">Co bierzemy pod uwagę:</h3>
+            <h3 className="text-lg font-heading font-700 text-[#1a2e28] mb-6">{t.custom.basisTitle}</h3>
             <div className="space-y-3 flex-1">
               {t.custom.points.map((p, i) => {
                 const Icon = basisIcons[i] || Ruler
@@ -65,7 +65,7 @@ export function CustomProject() {
         <div className="mt-12 text-center">
           <a href="#contact"
             className="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-white font-heading font-600 text-[13px] uppercase tracking-[0.15em] transition-all duration-300 hover:bg-accent-hover hover:shadow-2xl hover:shadow-accent/20 rounded-lg">
-            Zaprojektuj swój display
+            {t.custom.designCta}
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
         </div>

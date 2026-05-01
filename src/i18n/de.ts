@@ -1,6 +1,11 @@
 import type { Translations } from './en'
 
 export const de: Translations = {
+  meta: {
+    title: 'Woodson | POS-Displays aus Massivholz, gebaut für Jahre',
+    description: 'Wir entwerfen und fertigen POS-Displays und Regale aus Massivholz, abgestimmt auf Ihre Produkte, Verkaufsfläche und Marke. Hergestellt in Polen.',
+    ogTitle: 'Woodson — POS-Displays aus Massivholz',
+  },
   nav: {
     products: 'Projekte',
     whyWood: 'Warum Holz',
@@ -19,8 +24,13 @@ export const de: Translations = {
       'Hergestellt in Polen',
     ],
     cta: 'Angebot anfordern',
+    heroWord1: 'Holz-',
+    heroWord2: 'Displays',
+    heroWord3: 'für Jahre',
+    seeProjects: 'Projekte ansehen \u2192',
   },
   problem: {
+    label: 'Problem',
     title: 'Karton-Displays sehen nur kurz gut aus',
     text: 'Karton-POS-Displays werden oft als schnelle, temporäre Lösung behandelt. Nach wenigen Wochen verformen sie sich, verschleißen und verlieren ihr ästhetisches Erscheinungsbild.',
     subtitle: 'Für Ihre Marke bedeutet das:',
@@ -32,6 +42,7 @@ export const de: Translations = {
     outro: 'Deshalb suchen immer mehr Unternehmen nach haltbareren und ästhetisch ansprechenderen Display-Lösungen.',
   },
   solution: {
+    label: 'Lösung',
     title: 'Holz-Displays, maßgeschneidert für Ihr Produkt',
     text: 'Bei Woodson entwerfen und fertigen wir POS-Regale und Displays aus Massivholz, abgestimmt auf Ihre Produkte, Verkaufsflächen und Markencharakter.',
     subtitle: 'Unsere Displays:',
@@ -44,6 +55,8 @@ export const de: Translations = {
     outro: 'Eine Lösung, die in Geschäften, Showrooms und Verkaufsstellen funktioniert.',
   },
   comparison: {
+    label: 'Vergleich',
+    heading: 'Karton oder Holz?',
     title: 'Karton- oder Holz-Display?',
     headers: ['Karton-Display', 'Woodson Holz-Display'],
     rows: [
@@ -54,8 +67,26 @@ export const de: Translations = {
       ['Begrenzte Personalisierung', 'Design auf Produkt zugeschnitten'],
     ],
     note: 'Der Preisunterschied beträgt oft etwa 30–40 %, während die Haltbarkeit eines Holz-Displays um ein Vielfaches größer ist.',
+    cardboardTitle: 'Karton & Plastik',
+    woodTitle: 'Holz',
+    cardboardItems: [
+      'Zerfällt nach Wochen',
+      'Sieht billig aus',
+      'Baut kein Premium-Image auf',
+      'Erfordert ständigen Austausch',
+    ],
+    woodItems: [
+      'Hält jahrelang',
+      'Baut Markenimage auf',
+      '100% Naturholz',
+      'Individuelles Design',
+    ],
+    priceLabel: 'Preisunterschied',
+    durabilityLabel: 'Haltbarkeit des Holzes',
+    durabilityValue: 'um ein Vielfaches größer',
   },
   wood: {
+    label: 'Naturholz',
     title: 'Wir arbeiten ausschließlich mit Naturholz',
     text: 'Unsere Displays werden aus massivem, rohem Holz gefertigt.',
     noList: [
@@ -80,6 +111,7 @@ export const de: Translations = {
     ],
   },
   b2c: {
+    label: 'Nicht nur für Unternehmen',
     title: 'Displays für den privaten Gebrauch',
     text: 'Holz-Displays sind nicht nur für Unternehmen. Immer mehr Privatpersonen bestellen sie für Zuhause, Büro und private Veranstaltungen.',
     items: [
@@ -95,8 +127,10 @@ export const de: Translations = {
     ],
   },
   custom: {
+    label: 'Maßanfertigung',
     title: 'Jedes Display wird für ein bestimmtes Produkt gefertigt',
     text: 'Wir stellen keine Universalständer her — nur solche, die Ihre geschäftlichen Anforderungen zu 100% erfüllen',
+    basisTitle: 'Was wir berücksichtigen:',
     points: [
       'Produktabmessungen',
       'Produktgewicht',
@@ -115,8 +149,10 @@ export const de: Translations = {
       'und weitere Lösungen',
     ],
     outro: 'So entsteht ein Display, das perfekt zum Produkt und Verkaufsort passt.',
+    designCta: 'Gestalten Sie Ihr Display',
   },
   portfolio: {
+    label: 'Portfolio',
     title: 'Beispielprojekte ansehen',
     text: 'Wir fertigen Displays für verschiedene Branchen und Produkte.',
     items: [
@@ -129,7 +165,10 @@ export const de: Translations = {
     ],
   },
   process: {
+    label: 'Ablauf',
     title: 'So läuft die Zusammenarbeit',
+    description: 'Von der Idee zum fertigen Display — einfach und schnell.',
+    step: 'Schritt',
     steps: [
       { title: 'Projektgespräch', text: 'Wir lernen Ihr Produkt und seine Präsentationsweise kennen.' },
       { title: 'Display-Entwurf', text: 'Wir schlagen eine auf Ihre Bedürfnisse zugeschnittene Konstruktion vor.' },
@@ -139,6 +178,7 @@ export const de: Translations = {
     ],
   },
   trust: {
+    label: 'Vertrauen',
     title: 'Viele Kunden kommen mit neuen Projekten zurück',
     text: 'Seit Jahren arbeiten wir mit Unternehmen zusammen, die haltbare und ästhetische Display-Lösungen suchen.',
     points: [
@@ -150,9 +190,11 @@ export const de: Translations = {
     outro: 'Wiederkehrende Kunden sind die beste Bestätigung der Qualität unserer Arbeit.',
   },
   cta: {
+    label: 'Kontakt',
     title: 'Haben Sie eine Idee für die Präsentation Ihres Produkts?',
     text: 'Wir entwerfen und bauen ein Holz-Display, maßgeschneidert für Ihre Marke und Ihr Produkt.',
     btn: 'Anfrage senden',
+    location: 'Chełmek, Polen',
   },
   form: {
     name: 'Vollständiger Name',
@@ -163,6 +205,7 @@ export const de: Translations = {
     submit: 'Anfrage senden',
     success: 'Vielen Dank! Wir melden uns in Kürze.',
     note: 'Wir antworten innerhalb von 24 Stunden',
+    error: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
   },
   faq: {
     title: 'Häufig gestellte Fragen',
@@ -182,5 +225,8 @@ export const de: Translations = {
     contact: 'Kontakt',
     links: 'Links',
     rights: '© 2026 Greenfire Sp. z o.o. Alle Rechte vorbehalten.',
+  },
+  stats: {
+    items: ['haltbarer als Karton', 'Jahre Haltbarkeit', 'Massivholz'],
   },
 }

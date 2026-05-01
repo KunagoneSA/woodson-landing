@@ -14,10 +14,12 @@ import { CtaContact } from './components/CtaContact'
 import { Faq } from './components/Faq'
 import { Footer } from './components/Footer'
 import { ColorSwitcher } from './components/ColorSwitcher'
+import { SEO } from './components/SEO'
 
 function App() {
   return (
     <LanguageProvider>
+      <SEO />
       <div className="min-h-screen bg-darker font-body">
         <Navbar />
         <Hero />
@@ -33,7 +35,7 @@ function App() {
         <CtaContact />
         <Faq />
         <Footer />
-        <ColorSwitcher />
+        {import.meta.env.DEV && <ColorSwitcher />}
       </div>
     </LanguageProvider>
   )
