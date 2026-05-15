@@ -15,6 +15,7 @@ import { Faq } from './components/Faq'
 import { Footer } from './components/Footer'
 import { ColorSwitcher } from './components/ColorSwitcher'
 import { SEO } from './components/SEO'
+import { VersionBadge } from './components/VersionBadge'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Faq />
         <Footer />
         {import.meta.env.DEV && <ColorSwitcher />}
+        <VersionBadge />
       </div>
     </LanguageProvider>
   )
