@@ -225,6 +225,14 @@ export const pl: Translations = {
     contact: 'Kontakt',
     links: 'Linki',
     rights: '© 2026 Greenfire Sp. z o.o. Wszelkie prawa zastrzeżone.',
+    privacyLink: 'Polityka prywatności',
+  },
+  cookies: {
+    title: 'Używamy plików cookies',
+    text: 'Ta strona używa plików cookies do analityki i marketingu, żeby lepiej ją rozwijać i docierać do właściwych odbiorców. Możesz zaakceptować wszystkie, odrzucić niekonieczne albo doczytać szczegóły w polityce prywatności.',
+    acceptAll: 'Akceptuję wszystkie',
+    rejectAll: 'Odrzuć niekonieczne',
+    learnMore: 'Dowiedz się więcej',
   },
   stats: {
     items: ['trwalsze niż karton', 'lat żywotności', 'lite drewno'],

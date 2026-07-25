@@ -16,6 +16,7 @@ import { Footer } from './components/Footer'
 import { ColorSwitcher } from './components/ColorSwitcher'
 import { SEO } from './components/SEO'
 import { VersionBadge } from './components/VersionBadge'
+import { CookieBanner } from './components/CookieBanner'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Footer />
         {import.meta.env.DEV && <ColorSwitcher />}
         <VersionBadge />
+        <CookieBanner />
       </div>
     </LanguageProvider>
   )

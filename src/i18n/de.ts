@@ -225,6 +225,14 @@ export const de: Translations = {
     contact: 'Kontakt',
     links: 'Links',
     rights: '© 2026 Greenfire Sp. z o.o. Alle Rechte vorbehalten.',
+    privacyLink: 'Datenschutzerklärung',
+  },
+  cookies: {
+    title: 'Wir verwenden Cookies',
+    text: 'Diese Website verwendet Cookies für Analyse und Marketing, damit wir sie verbessern und die richtigen Zielgruppen erreichen können. Sie können alle akzeptieren, nicht notwendige ablehnen oder in der Datenschutzerklärung mehr erfahren.',
+    acceptAll: 'Alle akzeptieren',
+    rejectAll: 'Nicht notwendige ablehnen',
+    learnMore: 'Mehr erfahren',
   },
   stats: {
     items: ['haltbarer als Karton', 'Jahre Haltbarkeit', 'Massivholz'],

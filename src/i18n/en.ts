@@ -130,6 +130,14 @@ export interface Translations {
     contact: string
     links: string
     rights: string
+    privacyLink: string
+  }
+  cookies: {
+    title: string
+    text: string
+    acceptAll: string
+    rejectAll: string
+    learnMore: string
   }
   stats: {
     items: string[]
@@ -361,6 +369,14 @@ export const en: Translations = {
     contact: 'Contact',
     links: 'Links',
     rights: '© 2026 Greenfire Sp. z o.o. All rights reserved.',
+    privacyLink: 'Privacy policy',
+  },
+  cookies: {
+    title: 'We use cookies',
+    text: 'This site uses cookies for analytics and marketing so we can improve it and reach the right audiences. You can accept everything, reject non-essential cookies, or read more in our privacy policy.',
+    acceptAll: 'Accept all',
+    rejectAll: 'Reject non-essential',
+    learnMore: 'Learn more',
   },
   stats: {
     items: ['more durable than cardboard', 'years of durability', 'solid wood'],

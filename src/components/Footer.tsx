@@ -2,7 +2,11 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const privacyHref =
+    lang === 'de' ? '/datenschutzerklaerung.html'
+    : lang === 'en' ? '/privacy-policy.html'
+    : '/polityka-prywatnosci.html'
 
   return (
     <footer className="py-10 sm:py-20 bg-darker border-t border-white/10">
@@ -35,6 +39,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-white/70 font-body font-300">
               <li><a href="https://woodson.pl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">woodson.pl</a></li>
               <li><a href="https://klejonkanawymiar.pl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">klejonkanawymiar.pl</a></li>
+              <li><a href={privacyHref} className="hover:text-white transition-colors">{t.footer.privacyLink}</a></li>
             </ul>
           </div>
         </div>
