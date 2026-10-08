@@ -6,7 +6,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const GOOGLE_SHEETS_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL || ''
 
 export function CtaContact() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const s = useScrollReveal()
   const [name, setName] = useState('')
   const [company, setCompany] = useState('')
@@ -27,6 +27,14 @@ export function CtaContact() {
           method: 'POST', mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ timestamp: new Date().toISOString(), name, company, email, phone, message }),
+        })
+      }
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          form_location: 'contact_cta',
+          lang,
+          has_company: Boolean(company),
+          has_phone: Boolean(phone),
         })
       }
       setSubmitted(true)

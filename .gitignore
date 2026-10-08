@@ -30,3 +30,12 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+.env.*
+.claude/
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.m4a
+node_modules/
+.netlify/
